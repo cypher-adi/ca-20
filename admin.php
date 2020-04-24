@@ -44,9 +44,9 @@ if(isset($_POST['update'])){
         $row = mysqli_fetch_assoc($result);
         if($count==1){
             $value = $row['score']+ $value;           
-            $sql_up="update users set score='".$value."' ,up_time='".date("Y-m-d H:i:s")."' where email='".$email."'";
+            $sql_up="UPDATE users SET score='".$value."' ,up_time='".date("Y-m-d H:i:s")."' WHERE email='".$row['email']."'";
+            mysqli_query($conn, $sql_up);
             $errorMsg = "User updated";
-            echo $value;
             
         }
         else{
