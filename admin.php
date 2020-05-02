@@ -221,10 +221,10 @@ if(isset($_POST['update'])){
             <div class="col-md-12 text-center">
                 <p><a href="#"><i class="ion-ios-arrow-up"></i></a></p>
                 <p class="mb-0">
-                    Copyright &copy;<script>
+                    Cypher &copy;<script>
                         document.write(new Date().getFullYear());
 
-                    </script> All rights reserved | Designed with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://cypher-resume.herokuapp.com" target="_blank">Cypher</a>
+                    </script> All rights reserved | Designed with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://cypher-resume.herokuapp.com" target="_blank">Aditya</a>
                 </p>
             </div>
         </footer>

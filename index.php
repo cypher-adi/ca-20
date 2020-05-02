@@ -427,6 +427,8 @@ if(isset($_POST['login'])){
                 </div>
             </div>
         </section>
+
+        <div class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#rules">RULES</button></div><br>
         <!-- END FAQs -->
 
         <section class="ftco-section ftco-no-pt ftco-no-pb" id="carousel">
@@ -601,191 +603,308 @@ if(isset($_POST['login'])){
                         </div>
                     </div>
                 </div>
-            </div>
-    </div>
-    </section>
-    <!-- - - - - -end login pop-up - -  -->
+                <div class="row">
+                    <div class="modal fade" id="rules" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content" style="background-color:#160F45;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">POINTS SYSTEM</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
 
-    <section class="ftco-section ftco-section-2 section-signup page-header img" style="background-image: url(images/bg_2.jpg);" id="register">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                    <div class="card card-login py-4">
-                        <form class="form-login" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
-                            <div class="card-header card-header-primary text-center">
-                                <h4 class="card-title">Register</h4>
-                                <div class="social-line">
-                                    <a href="https://www.facebook.com/techSRIJAN" target="_blank" class="btn-icon d-flex align-items-center justify-content-center">
-                                        <i class="ion-logo-facebook"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/techsrijan.mmmut/" target="_blank" class="btn-icon d-flex align-items-center justify-content-center">
-                                        <i class="ion-logo-instagram"></i>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/ieee-student-branch-madan-mohan-malaviya-university-of-technology-57a27b1a6/" target="_blank" class="btn-icon d-flex align-items-center justify-content-center">
-                                        <i class="ion-logo-linkedin"></i>
-                                    </a>
+                                    <div class="row row-content">
+                                        <div class="col-12">
+                                            <div class="table-responsive">
+                                                <table class="table table-striped bg-light">
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <th class="text-center">S. No.</th>
+                                                            <th>Task</th>
+                                                            <th class="text-center">Points</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-center">1.</th>
+                                                            <td>Share our posts on your Facebook timeline and groups</td>
+                                                            <td class="text-info text-center">10/Share</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">2.</th>
+                                                            <td>Put our posts (with caption and also tag @techsrijan.mmmut) as your
+                                                                Instagram Story</td>
+                                                            <td class="text-info text-center">20/Story</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">3.</th>
+                                                            <td>Put our posts as your WhatsApp Status</td>
+                                                            <td class="text-info text-center">15/Status</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">4.</th>
+                                                            <td>Share our posts on your WhatsApp Groups</td>
+                                                            <td class="text-info text-center">10/Share</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">5.</th>
+                                                            <td>Display our posters on notice boards in your college campus</td>
+                                                            <td class="text-info text-center">50 Pts.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">6.</th>
+                                                            <td>Get students to register for techSRIJAN’20</td>
+                                                            <td class="text-info text-center">30/Register</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <td class="text-muted">50 or more registrations per day</td>
+                                                            <td class="text-info text-center">300 Pts. extra</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">7.</th>
+                                                            <td>Get students to pay for techSRIJAN'20</td>
+                                                            <td class="text-info text-center">70/Payment</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <td class="text-muted">25 payments</td>
+                                                            <td class="text-info text-center">300 Pts. extra</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <td class="text-muted">50 payments</td>
+                                                            <td class="text-info text-center">500 Pts. extra</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <td class="text-muted">100 payments</td>
+                                                            <td class="text-info text-center">1000 Pts. extra</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">8.</th>
+                                                            <td>Give us contact details of students/professors
+                                                                in charge of technical activities</td>
+                                                            <td class="text-info text-center">50/Contact</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">9.</th>
+                                                            <td>Organize a briefing for your college students to inform them about
+                                                                techSRIJAN’20 (Video proof needed)</td>
+                                                            <td class="text-info text-center">150 Pts.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">10.</th>
+                                                            <td>Arrange for our publicity coordinator to meet with your Tech Group</td>
+                                                            <td class="text-info text-center">100 Pts.</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-center">10.</th>
+                                                            <td>Send a mass mail to your college and bcc to the mail id
+                                                                email@gmail.com</td>
+                                                            <td class="text-info text-center">100 Pts.</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    Mail all the screenshots at email@gmail.com (under the subject:
+                                    ”Screenshots of techSRIJAN tasks” ) so that we can evaluate all the points along with your Registration No.
+                                    (Example - CA2020XXXX).
                                 </div>
                             </div>
-                            <div class="footer text-center mb-2">
-                                <!--Error msg-->
-                                <span style="color: #fff ; background-color:red;">
-                                    <?php
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- - - - - -end login pop-up - -  -->
+
+        <section class="ftco-section ftco-section-2 section-signup page-header img" style="background-image: url(images/bg_2.jpg);" id="register">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <div class="card card-login py-4">
+                            <form class="form-login" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
+                                <div class="card-header card-header-primary text-center">
+                                    <h4 class="card-title">Register</h4>
+                                    <div class="social-line">
+                                        <a href="https://www.facebook.com/techSRIJAN" target="_blank" class="btn-icon d-flex align-items-center justify-content-center">
+                                            <i class="ion-logo-facebook"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/techsrijan.mmmut/" target="_blank" class="btn-icon d-flex align-items-center justify-content-center">
+                                            <i class="ion-logo-instagram"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/ieee-student-branch-madan-mohan-malaviya-university-of-technology-57a27b1a6/" target="_blank" class="btn-icon d-flex align-items-center justify-content-center">
+                                            <i class="ion-logo-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="footer text-center mb-2">
+                                    <!--Error msg-->
+                                    <span style="color: #fff ; background-color:red;">
+                                        <?php
                                         if(isset($msg)){echo $msg;}
                                     ?>
-                                </span>
-                            </div>
-                            <div class="card-body pb-4 pt-2">
+                                    </span>
+                                </div>
+                                <div class="card-body pb-4 pt-2">
 
-                                <div class="footer text-center mb-2">
-                                    <span style="color: #fff ; background-color:red;">
-                                        <?php if(isset($errorUsername)){echo $errorUsername;} ?>
-                                    </span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="ion-ios-contact"></i>
+                                    <div class="footer text-center mb-2">
+                                        <span style="color: #fff ; background-color:red;">
+                                            <?php if(isset($errorUsername)){echo $errorUsername;} ?>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="Username" name="username" required>
-                                </div>
-                                <div class="footer text-center mb-2">
-                                    <span style="color: #fff ; background-color:red;">
-                                        <?php if(isset($errorEmail)){echo $errorEmail;} ?>
-                                    </span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="ion-ios-mail"></i>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="ion-ios-contact"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Username" name="username" required>
+                                    </div>
+                                    <div class="footer text-center mb-2">
+                                        <span style="color: #fff ; background-color:red;">
+                                            <?php if(isset($errorEmail)){echo $errorEmail;} ?>
                                         </span>
                                     </div>
-                                    <input type="email" class="form-control" placeholder="Email" name="email" required>
-                                </div>
-                                <div class="footer text-center mb-2">
-                                    <span style="color: #fff ; background-color:red;">
-                                        <?php if(isset($errorcollege)){echo $errorcollege;} ?>
-                                    </span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="ion-ios-contract"></i>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="ion-ios-mail"></i>
+                                            </span>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                                    </div>
+                                    <div class="footer text-center mb-2">
+                                        <span style="color: #fff ; background-color:red;">
+                                            <?php if(isset($errorcollege)){echo $errorcollege;} ?>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="College" name="college" required>
-                                </div>
-                                <div class="footer text-center mb-2">
-                                    <span style="color: #fff ; background-color:red;">
-                                        <?php if(isset($errorcity)){echo $errorcity;} ?>
-                                    </span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="ion-ios-copy"></i>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="ion-ios-contract"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="College" name="college" required>
+                                    </div>
+                                    <div class="footer text-center mb-2">
+                                        <span style="color: #fff ; background-color:red;">
+                                            <?php if(isset($errorcity)){echo $errorcity;} ?>
                                         </span>
                                     </div>
-                                    <input type="text" class="form-control" placeholder="City" name="city" required>
-                                </div>
-                                <div class="footer text-center mb-2">
-                                    <span style="color: #fff ; background-color:red;">
-                                        <?php if(isset($erroryear)){echo $erroryear;} ?>
-                                    </span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="ion-ios-calendar"></i>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="ion-ios-copy"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="City" name="city" required>
+                                    </div>
+                                    <div class="footer text-center mb-2">
+                                        <span style="color: #fff ; background-color:red;">
+                                            <?php if(isset($erroryear)){echo $erroryear;} ?>
                                         </span>
                                     </div>
-                                    <input type="number" class="form-control" placeholder="Year of study" name="year" required>
-                                </div>
-                                <div class="footer text-center mb-2">
-                                    <span style="color: #fff ; background-color:red;">
-                                        <?php if(isset($errormob_no)){echo $errormob_no;} ?>
-                                    </span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="ion-ios-call"></i>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="ion-ios-calendar"></i>
+                                            </span>
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="Year of study" name="year" required>
+                                    </div>
+                                    <div class="footer text-center mb-2">
+                                        <span style="color: #fff ; background-color:red;">
+                                            <?php if(isset($errormob_no)){echo $errormob_no;} ?>
                                         </span>
                                     </div>
-                                    <input type="number" class="form-control" placeholder="Mobile No." name="mob_no" required>
-                                </div>
-                                <div class="footer text-center mb-2">
-                                    <span style="color: #fff ; background-color:red;">
-                                        <?php if(isset($errorPassword)){echo $errorPassword;} ?>
-                                    </span>
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="ion-ios-lock"></i>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="ion-ios-call"></i>
+                                            </span>
+                                        </div>
+                                        <input type="number" class="form-control" placeholder="Mobile No." name="mob_no" required>
+                                    </div>
+                                    <div class="footer text-center mb-2">
+                                        <span style="color: #fff ; background-color:red;">
+                                            <?php if(isset($errorPassword)){echo $errorPassword;} ?>
                                         </span>
                                     </div>
-                                    <input type="password" class="form-control" placeholder="Password..." name="password" required>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="ion-ios-lock"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" class="form-control" placeholder="Password..." name="password" required>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="footer text-center mb-2">
-                                <input type="submit" value="register" name="register" class="btn btn-primary btn-round px-5">
-                            </div>
-                        </form>
+                                <div class="footer text-center mb-2">
+                                    <input type="submit" value="register" name="register" class="btn btn-primary btn-round px-5">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- - - - - -end- - - - -  -->
+        </section>
+        <!-- - - - - -end- - - - -  -->
 
-    <section class="ftco-section ftco-section-2">
-        <h2 class="text-center text-info">Contact</h2>
-        <div class="container">
-            <div class="row justify-content-center">
+        <section class="ftco-section ftco-section-2">
+            <h2 class="text-center text-info">Contact</h2>
+            <div class="container">
+                <div class="row justify-content-center">
 
-                <div class="col-md-4 text-center">
-                    <h2 class="heading-section mb-4">
-                    </h2>
-                    <div class="image-wrap">
-                        <img src="images/shresth.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
-                        <div class="text">
-                            <div class="img"></div>
-                            <span class="position">Shresth Sahai <br>+91-8787080870 <br> Executive Member <br> IEEE Student Branch, MMMUT</span>
+                    <div class="col-md-4 text-center">
+                        <h2 class="heading-section mb-4">
+                        </h2>
+                        <div class="image-wrap">
+                            <img src="images/shresth.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                            <div class="text">
+                                <div class="img"></div>
+                                <span class="position">Shresth Sahai <br>+91-8787080870 <br> Executive Member <br> IEEE Student Branch, MMMUT</span>
+                            </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="col-md-4 text-center">
-                    <h2 class="heading-section mb-4">
-                    </h2>
-                    <div class="image-wrap">
-                        <img src="images/kshitiz.jpeg" alt="Circle Image" class="rounded-circle img-fluid image">
-                        <div class="text">
-                            <div class="img"></div>
-                            <span class="position">Kshitiz Srivastava <br>+91-9129992203 <br> Executive Member <br> IEEE Student Branch, MMMUT</span>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <h2 class="heading-section mb-4">
+                        </h2>
+                        <div class="image-wrap">
+                            <img src="images/kshitiz.jpeg" alt="Circle Image" class="rounded-circle img-fluid image">
+                            <div class="text">
+                                <div class="img"></div>
+                                <span class="position">Kshitiz Srivastava <br>+91-9129992203 <br> Executive Member <br> IEEE Student Branch, MMMUT</span>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- - - - - -end- - - - -  -->
+        </section>
+        <!-- - - - - -end- - - - -  -->
 
 
-    <footer class="ftco-section ftco-section-2">
-        <div class="col-md-12 text-center">
-            <p><a href="#info"><i class="ion-ios-arrow-up"></i></a></p>
-            <p class="mb-0">
-                Copyright &copy;<script>
-                    document.write(new Date().getFullYear());
+        <footer class="ftco-section ftco-section-2">
+            <div class="col-md-12 text-center">
+                <p><a href="#"><i class="ion-ios-arrow-up"></i></a></p>
+                <p class="mb-0">
+                    Cypher &copy;<script>
+                        document.write(new Date().getFullYear());
 
-                </script> All rights reserved | Designed with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://cypher-resume.herokuapp.com" target="_blank">Cypher</a>
-            </p>
-        </div>
-    </footer>
+                    </script> All rights reserved | Designed with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://cypher-resume.herokuapp.com" target="_blank">Aditya</a>
+                </p>
+            </div>
+        </footer>
 
     </div>
 
