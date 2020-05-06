@@ -141,7 +141,7 @@ if($row['dp_status']==0){
                     <div class="col-md-6">
                         <ul class="list-unstyled user_data">
                             <li>
-                                <h5><strong>Registraion No. :&nbsp;</strong><span style="color:grey;"><?php echo "CA".$row['reg_no'];?></span></h5>
+                                <h5><strong>Registration No. :&nbsp;</strong><span style="color:grey;"><?php echo "CA".$row['reg_no'];?></span></h5>
                             </li>
                             <li>
                                 <h5><strong>Score :&nbsp; </strong><span style="color:#0f0;"><?php echo $row['score'];?></span></h5>

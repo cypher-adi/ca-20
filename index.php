@@ -863,7 +863,7 @@ if(isset($_POST['login'])){
                                     </div>
                                 </div>
                                 <div class="footer text-center mb-2">
-                                    <input type="submit" value="register" name="register" class="btn btn-primary btn-round px-5">
+                                    <input type="submit" value="Register" name="register" class="btn btn-primary btn-round px-5">
                                 </div>
                             </form>
                         </div>

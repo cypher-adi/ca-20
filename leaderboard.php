@@ -92,7 +92,7 @@ if($row['dp_status']==0){
                             <a class="nav-link d-flex align-items-center" href="leaderboard.php">Leaderboard</a>
                         </li>
                         <?php
-                                    if($reg_no == 2020000)
+                                    if($row['admin'] == 1)
                                         echo '
                         <li class="nav-item d-flex">
                             <a class="nav-link d-flex align-items-center" href="admin.php">Admin</a>
@@ -126,7 +126,7 @@ if($row['dp_status']==0){
                 <div class="row">
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table class="table table-hover text-left" style="color: #fff;">
+                            <table class="table text-left" style="color: #fff;">
                                 <thead>
                                     <tr style="font-size:20px;">
                                         <th>Rank</th>
