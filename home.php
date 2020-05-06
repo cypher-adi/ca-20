@@ -99,8 +99,8 @@ if($row['dp_status']==0){
                             <a class="nav-link d-flex align-items-center" href="leaderboard.php">Leaderboard</a>
                         </li>
                         <?php
-                                    if($reg_no == 2020000)
-                                        echo '
+                            if($row['admin'] == 1)
+                            echo '
                         <li class="nav-item d-flex">
                             <a class="nav-link d-flex align-items-center" href="admin.php">Admin</a>
                         </li>';
@@ -191,13 +191,13 @@ if($row['dp_status']==0){
                                     <tr>
                                         <th class="text-center">1.</th>
                                         <td>Share our posts on your Facebook timeline and groups</td>
-                                        <td class="text-info text-center">10/Share</td>
+                                        <td class="text-info text-center">15/Share</td>
                                     </tr>
                                     <tr>
                                         <th class="text-center">2.</th>
                                         <td>Put our posts (with caption and also tag @techsrijan.mmmut) as your
                                             Instagram Story</td>
-                                        <td class="text-info text-center">20/Story</td>
+                                        <td class="text-info text-center">15/Story</td>
                                     </tr>
                                     <tr>
                                         <th class="text-center">3.</th>
@@ -212,12 +212,12 @@ if($row['dp_status']==0){
                                     <tr>
                                         <th class="text-center">5.</th>
                                         <td>Display our posters on notice boards in your college campus</td>
-                                        <td class="text-info text-center">50 Pts.</td>
+                                        <td class="text-info text-center">40 Pts.</td>
                                     </tr>
                                     <tr>
                                         <th class="text-center">6.</th>
                                         <td>Get students to register for techSRIJAN’20</td>
-                                        <td class="text-info text-center">30/Register</td>
+                                        <td class="text-info text-center">50/Register</td>
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
@@ -231,18 +231,18 @@ if($row['dp_status']==0){
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <td class="text-muted">25 payments</td>
-                                        <td class="text-info text-center">300 Pts. extra</td>
+                                        <td class="text-muted">10 payments</td>
+                                        <td class="text-info text-center">100 Pts. extra</td>
+                                    </tr>
+                                    <tr>
+                                        <th>&nbsp;</th>
+                                        <td class="text-muted">20 payments</td>
+                                        <td class="text-info text-center">200 Pts. extra</td>
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
                                         <td class="text-muted">50 payments</td>
-                                        <td class="text-info text-center">500 Pts. extra</td>
-                                    </tr>
-                                    <tr>
-                                        <th>&nbsp;</th>
-                                        <td class="text-muted">100 payments</td>
-                                        <td class="text-info text-center">1000 Pts. extra</td>
+                                        <td class="text-info text-center">300 Pts. extra</td>
                                     </tr>
                                     <tr>
                                         <th class="text-center">8.</th>
@@ -254,17 +254,12 @@ if($row['dp_status']==0){
                                         <th class="text-center">9.</th>
                                         <td>Organize a briefing for your college students to inform them about
                                             techSRIJAN’20 (Video proof needed)</td>
-                                        <td class="text-info text-center">150 Pts.</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="text-center">10.</th>
-                                        <td>Arrange for our publicity coordinator to meet with your Tech Group</td>
                                         <td class="text-info text-center">100 Pts.</td>
                                     </tr>
                                     <tr>
                                         <th class="text-center">10.</th>
                                         <td>Send a mass mail to your college and bcc to the mail id
-                                            email@gmail.com</td>
+                                            ca.techsrijan20@gmail.com</td>
                                         <td class="text-info text-center">100 Pts.</td>
                                     </tr>
                                 </tbody>
@@ -272,7 +267,7 @@ if($row['dp_status']==0){
                         </div>
                         <footer>
                             <span class="text-info">Note:- </span>
-                            Mail all the screenshots at email@gmail.com (under the subject:
+                            Mail all the screenshots at ca.techsrijan20@gmail.com (under the subject:
                             ”Screenshots of techSRIJAN tasks” ) so that we can evaluate all the points along with your Registration No.
                             (Example - CA2020XXXX).
                         </footer>

@@ -243,6 +243,23 @@ if(isset($_POST['login'])){
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -428,7 +445,6 @@ if(isset($_POST['login'])){
             </div>
         </section>
 
-        <div class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#rules">RULES</button></div><br>
         <!-- END FAQs -->
 
         <section class="ftco-section ftco-no-pt ftco-no-pb" id="carousel">
@@ -521,7 +537,10 @@ if(isset($_POST['login'])){
         </section>
         <!-- END Perks -->
 
+
+
         <section class="ftco-section" id="typography">
+            <div class="text-center"><button type="button" class="btn btn-info" data-toggle="modal" data-target="#rules">RULES</button></div><br>
             <div class="container" id="response">
                 <div class="row">
                     <div class="col-md-12">
@@ -630,13 +649,13 @@ if(isset($_POST['login'])){
                                                         <tr>
                                                             <th class="text-center">1.</th>
                                                             <td>Share our posts on your Facebook timeline and groups</td>
-                                                            <td class="text-info text-center">10/Share</td>
+                                                            <td class="text-info text-center">15/Share</td>
                                                         </tr>
                                                         <tr>
                                                             <th class="text-center">2.</th>
                                                             <td>Put our posts (with caption and also tag @techsrijan.mmmut) as your
                                                                 Instagram Story</td>
-                                                            <td class="text-info text-center">20/Story</td>
+                                                            <td class="text-info text-center">15/Story</td>
                                                         </tr>
                                                         <tr>
                                                             <th class="text-center">3.</th>
@@ -651,12 +670,12 @@ if(isset($_POST['login'])){
                                                         <tr>
                                                             <th class="text-center">5.</th>
                                                             <td>Display our posters on notice boards in your college campus</td>
-                                                            <td class="text-info text-center">50 Pts.</td>
+                                                            <td class="text-info text-center">40 Pts.</td>
                                                         </tr>
                                                         <tr>
                                                             <th class="text-center">6.</th>
                                                             <td>Get students to register for techSRIJAN’20</td>
-                                                            <td class="text-info text-center">30/Register</td>
+                                                            <td class="text-info text-center">50/Register</td>
                                                         </tr>
                                                         <tr>
                                                             <th>&nbsp;</th>
@@ -670,18 +689,18 @@ if(isset($_POST['login'])){
                                                         </tr>
                                                         <tr>
                                                             <th>&nbsp;</th>
-                                                            <td class="text-muted">25 payments</td>
-                                                            <td class="text-info text-center">300 Pts. extra</td>
+                                                            <td class="text-muted">10 payments</td>
+                                                            <td class="text-info text-center">100 Pts. extra</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>&nbsp;</th>
+                                                            <td class="text-muted">20 payments</td>
+                                                            <td class="text-info text-center">200 Pts. extra</td>
                                                         </tr>
                                                         <tr>
                                                             <th>&nbsp;</th>
                                                             <td class="text-muted">50 payments</td>
-                                                            <td class="text-info text-center">500 Pts. extra</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>&nbsp;</th>
-                                                            <td class="text-muted">100 payments</td>
-                                                            <td class="text-info text-center">1000 Pts. extra</td>
+                                                            <td class="text-info text-center">300 Pts. extra</td>
                                                         </tr>
                                                         <tr>
                                                             <th class="text-center">8.</th>
@@ -693,17 +712,12 @@ if(isset($_POST['login'])){
                                                             <th class="text-center">9.</th>
                                                             <td>Organize a briefing for your college students to inform them about
                                                                 techSRIJAN’20 (Video proof needed)</td>
-                                                            <td class="text-info text-center">150 Pts.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="text-center">10.</th>
-                                                            <td>Arrange for our publicity coordinator to meet with your Tech Group</td>
                                                             <td class="text-info text-center">100 Pts.</td>
                                                         </tr>
                                                         <tr>
                                                             <th class="text-center">10.</th>
                                                             <td>Send a mass mail to your college and bcc to the mail id
-                                                                email@gmail.com</td>
+                                                                ca.techsrijan20@gmail.com</td>
                                                             <td class="text-info text-center">100 Pts.</td>
                                                         </tr>
                                                     </tbody>
@@ -713,7 +727,7 @@ if(isset($_POST['login'])){
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    Mail all the screenshots at email@gmail.com (under the subject:
+                                    Mail all the screenshots at ca.techsrijan20@gmail.com (under the subject:
                                     ”Screenshots of techSRIJAN tasks” ) so that we can evaluate all the points along with your Registration No.
                                     (Example - CA2020XXXX).
                                 </div>
@@ -864,37 +878,43 @@ if(isset($_POST['login'])){
             <div class="container">
                 <div class="row justify-content-center">
 
+                    <!--
                     <div class="col-md-4 text-center">
                         <h2 class="heading-section mb-4">
                         </h2>
                         <div class="image-wrap">
-                            <img src="images/shresth.jpg" alt="Circle Image" class="rounded-circle img-fluid image">
+                            <img src="#" alt="Circle Image" class="rounded-circle img-fluid image">
                             <div class="text">
                                 <div class="img"></div>
-                                <span class="position">Shresth Sahai <br>+91-8787080870 <br> Executive Member <br> IEEE Student Branch, MMMUT</span>
+                                <span class="position"></span>
                             </div>
                         </div>
 
                     </div>
-                    <div class="col-md-4 text-center">
-                        <h2 class="heading-section mb-4">
-                        </h2>
-                        <div class="image-wrap">
-                            <img src="images/kshitiz.jpeg" alt="Circle Image" class="rounded-circle img-fluid image">
-                            <div class="text">
-                                <div class="img"></div>
-                                <span class="position">Kshitiz Srivastava <br>+91-9129992203 <br> Executive Member <br> IEEE Student Branch, MMMUT</span>
-                            </div>
-                        </div>
-
-                    </div>
+-->
                 </div>
             </div>
         </section>
-        <!-- - - - - -end- - - - -  -->
+
+        <!--Google map-->
+        <section class="ftco-section ftco-section-2">
+            <h2 class="text-center text-info">Reach Us</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="map-container-google-1" class="z-depth-1-half map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.405610088366!2d83.43099121502114!3d26.731429583206005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39915ca3e2aa136b%3A0xc039bdf0211338a9!2sMadan%20Mohan%20Malaviya%20University%20Of%20Technology!5e0!3m2!1sen!2sin!4v1588436809111!5m2!1sen!2sin" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--Google Maps-->
 
 
-        <footer class="ftco-section ftco-section-2">
+        <footer class=" ftco-section ftco-section-2">
             <div class="col-md-12 text-center">
                 <p><a href="#"><i class="ion-ios-arrow-up"></i></a></p>
                 <p class="mb-0">

@@ -11,7 +11,7 @@ $row = mysqli_fetch_assoc($result);
 if($row['dp_status']==0){
                 header('location: prof_pic.php');               
             }
-if($reg_no != 2020000){
+if($row['admin'] == 0){
                 header('location: home.php');               
             }
 
