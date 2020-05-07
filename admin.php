@@ -57,6 +57,7 @@ if(isset($_POST['update'])){
     }
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -212,6 +213,97 @@ if(isset($_POST['update'])){
                                 <input type="submit" value="update" name="update" class="btn btn-primary btn-round px-5">
                             </div>
                         </form>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        <div class="x_title">
+                            <h3>Search Record</h3>
+                            <div class="clearfix">Enter Email or Reg. No. Below</div>
+                        </div>
+                        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+                            <div class="card-body pb-4 pt-2">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="ion-ios-contact"></i>
+                                        </span>
+                                    </div>
+                                    <input type="email" class="form-control" placeholder="Email" name="emailf">
+                                </div>
+                            </div>
+                            <div class="clearfix text-center">OR</div>
+                            <div class="card-body pb-4 pt-2">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                            <i class="ion-ios-contact"></i>
+                                        </span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Reg. No." name="reg_nof">
+                                </div>
+                            </div>
+                            <div class="footer text-center mb-2">
+                                <input type="submit" value="Search" name="search" class="btn btn-primary btn-round px-5">
+                                <input type="submit" value="Reset" name="reset" class="btn btn-primary btn-round px-5 ml-5">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <?php
+                            $error_log=false;
+                            $countf=0;
+                            if(isset($_POST['search'])){
+                                $emailf = trim($_POST['emailf']);
+                                $emailf = htmlspecialchars(strip_tags($emailf));
+
+                                $reg_nof = trim($_POST['reg_nof']);
+                                $reg_nof = htmlspecialchars(strip_tags($reg_nof));
+
+                                if(empty($emailf) && empty($reg_nof)){
+                                    $error_log = true;
+                                    $errorMsg = 'Please input email / reg. no.';
+                                }elseif(!empty($emailf) && !filter_var($emailf, FILTER_VALIDATE_EMAIL)){
+                                    $error_log = true;
+                                    $errorMsg = 'Please enter a valid email address';
+                                }
+
+                                if(!$error_log){
+
+                                    $sqlf = "select * from users where email='$emailf' or reg_no='$reg_nof' ";
+                                    $resultf = mysqli_query($conn, $sqlf);
+                                    $countf = mysqli_num_rows($resultf);
+                                    $rowf = mysqli_fetch_assoc($resultf);
+                                    if($countf==1){
+                                        $errorMsg = "User Found";
+                                        echo '
+                                            <div class="card" style="width: 20rem; margin: auto">
+                                            <img class="card-img-top" src="'.$rowf['img_path'].'" alt="Card image cap">
+                                            <div class="card-body bg-dark">
+                                            <h5 class="card-title">Name: '.$rowf['username'].'</h5>
+                                            <p class="card-text">
+                                                Reg. No: '.$rowf['reg_no'].' <br/>
+                                                Score: '.$rowf['score'].' <br/>
+                                                Email: '.$rowf['email'].' <br/>
+                                                Mob. No: '.$rowf['mob_no'].' <br/>
+                                                College: '.$rowf['college'].' <br/>
+                                                City: '.$rowf['city'].' <br/>
+                                            </p>
+                                            </div>
+                                            </div>';
+                                    }
+                                    else{
+                                        $errorMsg = "User not found";
+                                    }
+                                    echo '<div class="text-center">'; if(isset($errorMsg) && $countf == 0){echo $errorMsg; } echo '</div>';
+                                    
+                                    }
+                                }
+                                if(isset($_POST['reset'])){
+                                    $error_log=false;
+                                    $countf=0;
+                                }
+                        ?>
                     </div>
                 </div>
             </div>
