@@ -282,7 +282,7 @@ if(isset($_POST['update'])){
                                             <div class="card-body bg-dark">
                                             <h5 class="card-title">Name: '.$rowf['username'].'</h5>
                                             <p class="card-text">
-                                                Reg. No: '.$rowf['reg_no'].' <br/>
+                                                Reg. No: CA'.$rowf['reg_no'].' <br/>
                                                 Score: '.$rowf['score'].' <br/>
                                                 Email: '.$rowf['email'].' <br/>
                                                 Mob. No: '.$rowf['mob_no'].' <br/>
